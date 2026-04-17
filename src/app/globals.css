@@ -27,46 +27,50 @@
   --font-sans:  ui-sans-serif, system-ui, sans-serif;
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; }
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { height: 100%; }
 
-body {
-  background: #FFF8F0;
-  color: #3D2B1F;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: ui-sans-serif, system-ui, sans-serif;
+  body {
+    background: #FFF8F0;
+    color: #3D2B1F;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-thumb { background: #FFE8D6; border-radius: 10px; }
+
+  input:focus, textarea:focus, select:focus {
+    border-color: #FF6B35 !important;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.13);
+    outline: none;
+  }
+  select option { background: #3D2B1F; color: #fff; }
 }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-thumb { background: #FFE8D6; border-radius: 10px; }
-
-input:focus, textarea:focus, select:focus {
-  border-color: #FF6B35 !important;
-  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.13);
-  outline: none;
-}
-select option { background: #3D2B1F; color: #fff; }
-
-.display-heading {
-  font-family: Georgia, "Georgia Pro", serif;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  color: #3D2B1F;
-  line-height: 1.05;
-}
-.section-heading {
-  font-family: Georgia, "Georgia Pro", serif;
-  font-weight: 700;
-  color: #3D2B1F;
-  line-height: 1.2;
-}
-.label-caps {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #A0644A;
+@layer components {
+  .display-heading {
+    font-family: Georgia, "Georgia Pro", serif;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #3D2B1F;
+    line-height: 1.05;
+  }
+  .section-heading {
+    font-family: Georgia, "Georgia Pro", serif;
+    font-weight: 700;
+    color: #3D2B1F;
+    line-height: 1.2;
+  }
+  .label-caps {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #A0644A;
+  }
 }
 
 @media print {
