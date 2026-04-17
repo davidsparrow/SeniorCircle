@@ -34,8 +34,8 @@ export default function DemoBar() {
 
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-50 flex h-14 items-center justify-between px-6"
-      style={{ background: '#3D2B1F' }}
+      className="sticky top-16 z-30 flex items-center justify-between px-6 border-b-2 py-[10px]"
+      style={{ background: '#3D2B1F', borderColor: '#6B4226' }}
     >
       <span
         className="hidden text-[11px] font-bold tracking-widest uppercase sm:block"

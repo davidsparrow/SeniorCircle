@@ -21,10 +21,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col" style={{ background: '#FFF8F0', color: '#3D2B1F' }}>
         <DemoProvider>
           <Navbar />
-          <main className="flex-1 pb-16">{children}</main>
+          <DemoBar />
+          <main className="flex-1">{children}</main>
           <Footer />
           <DemoTooltip />
-          <DemoBar />
         </DemoProvider>
       </body>
     </html>
